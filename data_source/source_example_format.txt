@@ -1,0 +1,28 @@
+ # THIS IS INSTRUCTION FILE FOR STORING .txt DATA
+ Each line represents the DATA of each load, node, or element
+ Lines in the file start with Load data > Node data > Element data
+ *If put in to a list
+    Lines of Load data should have 3 elements in the list
+    Lines of Node data should have 6 elements in the list
+    Lines of Element data should have 9 elements in the list
+ ** X,Z are horizontal coordinate and Y is the vertical coordinate
+
+ # LOAD DATA FORMAT ------------------------------------------------------------
+ Load_name, [Load_type],[[Load_size_xstart, Load_size_ystart, Load_size_zstart], [Load_size_xend, Load_size_yend, Load_size_zend]]
+
+ EX.
+ 1, [1],[[0, -1, 0], [0, -1, 0]] # LOAD DATA
+
+ # NODE DATA FORMAT ------------------------------------------------------------
+ Node_name, [x_coordnate, y_coordnate, z_coordnate],[x-ais movement boundary condition, y-ais movement boundary condition, z-ais movement boundary condition, x-ais rotation boundary condition, y-ais rotation boundary condition, z-ais rotation boundary condition],[[LOAD DATA]],[[MOMENT DATA]],0
+
+ ** boundary condition = 1 fix boundary condition, boundary condition = 0 free boundary condition
+ EX.
+ 1, [3, 3, 0],[0, 0, 0, 0, 0, 0],[],[],0 # NODE DATA without LOAD applied
+ 8, [2, 6, 2],[0, 0, 0, 0, 0, 0],[[1, [1],[[0, -1, 0], [0, -1, 0]]]],[],0 # NODE DATA with LOAD applied
+
+ # ELEMENT DATA FORMAT ---------------------------------------------------------
+ Element_name,Start_Node_name,End_Node_name,Young_Modulus,Sectional_area,[[x-axis_moment_of_inertia], [y-axis_moment_of_inertia], [z-axis_moment_of_inertia]],Shear_Modulus,Polar_moment_of_inertia,Angle_of_Roll # ELEMENT DATA
+ EX.
+ 1,1,2,205000000000,0.003,[[1e-08], [1e-08], [1e-08]],8000000,6e-09,0 # ELEMENT DATA
+
