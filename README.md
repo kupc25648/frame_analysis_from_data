@@ -22,5 +22,5 @@ Please feel free to contact me at kupc25648@hotmail.com
 
 Example
 
-<img src="images/Frame_large.png">
-<img src="images/Frame_small.png">
+<img src="images/Example_large.png">
+<img src="images/Example_small.png">
