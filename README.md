@@ -3,7 +3,7 @@ FEM analysis of frame structure that read structural data stored in .txt file
 
 What the project does?
 
-This is the Program to calculate 3D Frame Structure using Matrix Analysis Method. By reading .txt that contain stuctural data including loads, nodes, and elements. The program will form the structure stiffness matrix and will calculate deformations of the structure and strain energy. It also have export module which will export structure in .obj format. 
+This is the Program to calculate 3D Frame Structure using Matrix Analysis Method. By reading .txt data file that contains stuctural data including loads, nodes, and elements. The program will form the structure stiffness matrix and will calculate deformations of the structure and strain energy. It also have export module which will export structure in .obj format. 
 
 How users can get started with the project?
 
